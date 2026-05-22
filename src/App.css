@@ -1,0 +1,76 @@
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.main-content {
+  flex: 1;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-intro {
+  margin-bottom: 32px;
+  text-align: center;
+  animation: intro-fade-in 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.main-title {
+  font-size: 38px;
+  font-weight: 800;
+  letter-spacing: -1.2px;
+  margin-bottom: 8px;
+  color: var(--text-main);
+  background: linear-gradient(135deg, var(--text-main) 40%, var(--primary-color) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-subtitle {
+  font-size: 16px;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.app-footer {
+  text-align: center;
+  padding: 24px 0;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 500;
+  transition: background-color var(--transition-normal), border var(--transition-normal);
+}
+
+/* Animations */
+@keyframes intro-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive tweaks */
+@media (max-width: 600px) {
+  .main-content {
+    padding-top: 24px;
+    padding-bottom: 40px;
+  }
+  .main-title {
+    font-size: 28px;
+    letter-spacing: -0.6px;
+  }
+  .main-subtitle {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+}
